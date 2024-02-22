@@ -1,0 +1,134 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_background"
+    tools:context="presentation.fragment.HomeFragment">
+
+    <TextView
+        android:id="@+id/moneyText"
+        android:layout_width="109dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_extrabold"
+        android:gravity="center"
+        android:text="@string/money"
+        android:textColor="@color/neutral"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/house_button"
+        android:layout_width="34dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/house_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/grey_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/grey_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/plusButton"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/plus_button"
+        app:layout_constraintBottom_toTopOf="@+id/grey_line"
+        app:layout_constraintEnd_toStartOf="@+id/house_button"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toEndOf="@+id/moneyText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/creditCardsView"
+        android:layout_width="321dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/rounded_corners_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grey_line">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:text="@string/my_cards"
+            android:textColor="@color/neutral" />
+
+        <TextView
+            android:id="@+id/seeAllCards"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_gravity="end"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:text="@string/see_all"
+            android:textColor="@color/neutral" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myCardsRecView"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="center" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recentTransactionsCard"
+        android:layout_width="321dp"
+        android:layout_height="206dp"
+        android:background="@drawable/rounded_corners_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditCardsView"
+        app:layout_constraintVertical_bias="0.438">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:text="@string/recent_transactions"
+            android:textColor="@color/neutral" />
+
+        <TextView
+            android:id="@+id/seeAllTransactions"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_gravity="end"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:text="@string/see_all"
+            android:textColor="@color/neutral" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentTransactionsRecView"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="center" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

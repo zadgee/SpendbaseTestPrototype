@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="77dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource"
+    android:id="@+id/creditCardInfoContainer">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="77dp">
+
+        <ImageView
+            tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/cardImage"
+            android:layout_width="96dp"
+            android:layout_height="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardName"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/last4CardNumbers"
+            android:layout_width="72dp"
+            android:layout_height="17dp"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="end"
+            android:text="1111"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/cardImage"
+            app:layout_constraintEnd_toEndOf="@+id/cardImage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardImage"
+            app:layout_constraintTop_toTopOf="@+id/cardImage"
+            app:layout_constraintVertical_bias="0.875"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/cardName"
+            android:layout_width="95dp"
+            android:layout_height="36dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/cardHolderName"
+            android:textColor="@color/neutral"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/nextButton"
+            android:layout_width="16dp"
+            android:layout_height="25dp"
+            android:src="@drawable/next_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.721"
+            app:layout_constraintStart_toEndOf="@+id/cardName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.48" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

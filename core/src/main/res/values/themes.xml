@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SpendbasePrototype" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/white_background</item>
+    </style>
+
+    <style name="Theme.SpendbasePrototype" parent="Base.Theme.SpendbasePrototype" />
+    
+    <style name="searchViewStyle" parent="Base.Theme.SpendbasePrototype">
+        <item name="android:textColorHint">@color/neutral_grey</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:searchHintIcon">@drawable/search_icon</item>
+        <item name="android:searchIcon">@drawable/search_icon</item>
+        <item name="android:editTextColor">@color/neutral_grey</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:drawableEnd">@drawable/searching_filter_button</item>
+    </style>
+</resources>
